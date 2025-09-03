@@ -15,9 +15,9 @@
 <body>
 <?php
 $books = [
-        "Harry Potter",
-    "Percy Jackson",
-    "1984"
+        ["Name"=>"Harry Potter"],
+    ["Name" =>"Percy Jackson"],
+    ["Name" => "1984"]
 ];
 
 ?>
@@ -25,10 +25,11 @@ $books = [
 Recommended Books
 </h1>
 
-<ul>
+<p>
     <?php foreach ($books as $book): ?>
-        <li><?= "You have read " . $book ?> </li>
-    <?php endforeach; ?>
-</ul>
+    <p> <?= $book["Name"]?> </p>
+<?php endforeach; ?>
+
+</p>
 </body>
 </html>

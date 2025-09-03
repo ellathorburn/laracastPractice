@@ -1,0 +1,39 @@
+
+services:
+  apache-php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./practice:/var/www/html
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+
+  mysql:
+    image: mysql:9.4
+    environment:
+      MYSQL_ROOT_PASSWORD: "password"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app-network
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    environment:
+      PMA_HOST: mysql
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db_data:

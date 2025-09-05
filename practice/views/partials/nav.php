@@ -18,13 +18,13 @@
                         <a href="/about"
                            aria-current="page"
                            class="rounded-md px-3 py-2 text-sm font-medium
-          <?php echo urlIs("/about") ? 'bg-blue-900 text-white' : 'bg-gray-950/50 text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
+          <?php echo urlIs('/about') ? 'bg-blue-900 text-white' : 'bg-gray-950/50 text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
                             About
                         </a>
                         <a href="/contact"
                            aria-current="page"
                            class="rounded-md px-3 py-2 text-sm font-medium
-          <?php echo urlIs("/contact") ? 'bg-blue-900 text-white' : 'bg-gray-950/50 text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
+          <?php echo urlIs('/contact') ? 'bg-blue-900 text-white' : 'bg-gray-950/50 text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
                             Contact
                         </a>
                     </div>

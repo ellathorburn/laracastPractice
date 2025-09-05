@@ -1,0 +1,27 @@
+{
+  "listeners": {
+    "*:80": { "pass": "routes/main" }
+  },
+  "routes": {
+    "main": [
+      {
+        "match": { "uri": [ "/favicon.ico", "/robots.txt", "/assets/*", "/*.css", "/*.js", "/*.png", "/*.jpg", "/*.svg", "/*.ico" ] },
+        "action": { "share": "/www$uri" }
+      },
+      {
+        "match": { "uri": [ "/*" ] },
+        "action": { "pass": "applications/php_app" }
+      }
+    ]
+  },
+  "applications": {
+    "php_app": {
+      "type": "php",
+      "root": "/www",
+      "script": "index.php",
+      "options": {
+        "file": "/usr/local/etc/php/conf.d/app.ini"
+      }
+    }
+  }
+}

@@ -1,16 +1,16 @@
 
 services:
-  apache-php:
+  web:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - ./practice:/var/www/html
     ports:
       - "80:80"
+    volumes:
+      - ./practice:/www/
+      - ./unit.json:/docker-entrypoint.d/config.json:ro
     networks:
-      - app-network
-
+        - app-network
   mysql:
     image: mysql:9.4
     environment:

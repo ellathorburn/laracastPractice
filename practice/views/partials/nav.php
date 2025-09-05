@@ -11,12 +11,22 @@
                         <a href="/"
                            aria-current="page"
                            class="rounded-md px-3 py-2 text-sm font-medium
-          <?php echo $_SERVER['REQUEST_URI'] === '/' ? 'bg-gray-900 text-white' : 'bg-gray-950/50 text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
+          <?php echo urlIs("/")? 'bg-blue-900 text-white' : 'bg-gray-950/50 text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
                             Home
                         </a>
 
-                        <a href="/about.php" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">About us</a>
-                        <a href="/contact.php" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contact</a>
+                        <a href="/about"
+                           aria-current="page"
+                           class="rounded-md px-3 py-2 text-sm font-medium
+          <?php echo urlIs("/about") ? 'bg-blue-900 text-white' : 'bg-gray-950/50 text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
+                            About
+                        </a>
+                        <a href="/contact"
+                           aria-current="page"
+                           class="rounded-md px-3 py-2 text-sm font-medium
+          <?php echo urlIs("/contact") ? 'bg-blue-900 text-white' : 'bg-gray-950/50 text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
+                            Contact
+                        </a>
                     </div>
                 </div>
             </div>

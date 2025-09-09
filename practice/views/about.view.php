@@ -4,7 +4,7 @@
 
     <main>
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <p> Hello you are at about</p>
+            <p> Hi, this page has been created to help me learn PHP!</p>
         </div>
     </main>
 

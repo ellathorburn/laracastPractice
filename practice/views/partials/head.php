@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="h-full bg-gray-900">
+<html lang="en" class="h-full bg-blue-50">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"

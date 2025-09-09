@@ -1,4 +1,4 @@
-<nav class="bg-gray-800/50">
+<nav class="bg-blue-100/80">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
             <div class="flex items-center">
@@ -11,28 +11,34 @@
                         <a href="/"
                            aria-current="page"
                            class="rounded-md px-3 py-2 text-sm font-medium
-          <?php echo urlIs("/")? 'bg-blue-900 text-white' : 'bg-gray-950/50 text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
+          <?php echo urlIs("/")? 'bg-blue-200 text-blue-900' : 'bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-900'; ?>">
                             Home
                         </a>
 
                         <a href="/about"
                            aria-current="page"
                            class="rounded-md px-3 py-2 text-sm font-medium
-          <?php echo urlIs('/about') ? 'bg-blue-900 text-white' : 'bg-gray-950/50 text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
+          <?php echo urlIs('/about') ? 'bg-blue-200 text-blue-900' : 'bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-900'; ?>">
                             About
                         </a>
                         <a href="/contact"
                            aria-current="page"
                            class="rounded-md px-3 py-2 text-sm font-medium
-          <?php echo urlIs('/contact') ? 'bg-blue-900 text-white' : 'bg-gray-950/50 text-gray-300 hover:bg-white/5 hover:text-white'; ?>">
+          <?php echo urlIs('/contact') ? 'bg-blue-200 text-blue-900' : 'bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-900'; ?>">
                             Contact
+                        </a>
+                        <a href="/notes"
+                           aria-current="page"
+                           class="rounded-md px-3 py-2 text-sm font-medium
+          <?php echo urlIs('/notes') ? 'bg-blue-200 text-blue-900' : 'bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-900'; ?>">
+                            Notes
                         </a>
                     </div>
                 </div>
             </div>
             <div class="hidden md:block">
                 <div class="ml-4 flex items-center md:ml-6">
-                    <button type="button" class="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
+                    <button type="button" class="relative rounded-full p-1 text-blue-600 hover:text-blue-900 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500">
                         <span class="absolute -inset-1.5"></span>
                         <span class="sr-only">View notifications</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
@@ -48,17 +54,17 @@
                             <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-8 rounded-full outline -outline-offset-1 outline-white/10" />
                         </button>
 
-                        <el-menu anchor="bottom end" popover class="w-48 origin-top-right rounded-md bg-gray-800 py-1 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Your profile</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Settings</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Sign out</a>
+                        <el-menu anchor="bottom end" popover class="w-48 origin-top-right rounded-md bg-blue-100 py-1 outline-1 -outline-offset-1 outline-blue-200 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                            <a href="#" class="block px-4 py-2 text-sm text-blue-700 focus:bg-blue-200 focus:outline-hidden">Your profile</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-blue-700 focus:bg-blue-200 focus:outline-hidden">Settings</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-blue-700 focus:bg-blue-200 focus:outline-hidden">Sign out</a>
                         </el-menu>
                     </el-dropdown>
                 </div>
             </div>
             <div class="-mr-2 flex md:hidden">
                 <!-- Mobile menu button -->
-                <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
+                <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-blue-600 hover:bg-blue-100 hover:text-blue-900 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500">
                     <span class="absolute -inset-0.5"></span>
                     <span class="sr-only">Open main menu</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
@@ -75,11 +81,11 @@
     <el-disclosure id="mobile-menu" hidden class="block md:hidden">
         <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
             <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-            <a href="#" aria-current="page" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Dashboard</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Team</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Projects</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Calendar</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Reports</a>
+            <a href="#" aria-current="page" class="block rounded-md bg-blue-200 px-3 py-2 text-base font-medium text-blue-900">Dashboard</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-blue-700 hover:bg-blue-100 hover:text-blue-900">Team</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-blue-700 hover:bg-blue-100 hover:text-blue-900">Projects</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-blue-700 hover:bg-blue-100 hover:text-blue-900">Calendar</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-blue-700 hover:bg-blue-100 hover:text-blue-900">Reports</a>
         </div>
         <div class="border-t border-white/10 pt-4 pb-3">
             <div class="flex items-center px-5">
@@ -87,10 +93,10 @@
                     <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-10 rounded-full outline -outline-offset-1 outline-white/10" />
                 </div>
                 <div class="ml-3">
-                    <div class="text-base/5 font-medium text-white">Tom Cook</div>
-                    <div class="text-sm font-medium text-gray-400">tom@example.com</div>
+                    <div class="text-base/5 font-medium text-blue-900">Tom Cook</div>
+                    <div class="text-sm font-medium text-blue-600">tom@example.com</div>
                 </div>
-                <button type="button" class="relative ml-auto shrink-0 rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
+                <button type="button" class="relative ml-auto shrink-0 rounded-full p-1 text-blue-600 hover:text-blue-900 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500">
                     <span class="absolute -inset-1.5"></span>
                     <span class="sr-only">View notifications</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
@@ -99,9 +105,9 @@
                 </button>
             </div>
             <div class="mt-3 space-y-1 px-2">
-                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white">Your profile</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white">Settings</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white">Sign out</a>
+                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-blue-700 hover:bg-blue-100 hover:text-blue-900">Your profile</a>
+                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-blue-700 hover:bg-blue-100 hover:text-blue-900">Settings</a>
+                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-blue-700 hover:bg-blue-100 hover:text-blue-900">Sign out</a>
             </div>
         </div>
     </el-disclosure>

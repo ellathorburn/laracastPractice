@@ -15,11 +15,11 @@
                             Home
                         </a>
 
-                        <a href="/about"
+                        <a href="/weather"
                            aria-current="page"
                            class="rounded-md px-3 py-2 text-sm font-medium
-          <?php echo urlIs('/about') ? 'bg-blue-200 text-blue-900' : 'bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-900'; ?>">
-                            About
+          <?php echo urlIs('/weather') ? 'bg-blue-200 text-blue-900' : 'bg-blue-50 text-blue-700 hover:bg-blue-100 hover:text-blue-900'; ?>">
+                            Weather
                         </a>
                         <a href="/contact"
                            aria-current="page"
